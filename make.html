@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Make a game | Kitchen Table Games</title>
+<meta name="description" content="Type what your child is learning and get a game you can play right away.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the form</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>Kitchen Table Games</a>
+    <nav aria-label="Main">
+      <a href="./">Make a game</a>
+      <a href="prompts.html">Ideas with AI</a>
+      <a href="./#safe">Is it safe?</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="narrow">
+  <div class="page-head">
+    <a href="./">Pick a different game</a>
+    <h1 id="make-title">Make a game</h1>
+    <p id="make-intro"></p>
+  </div>
+
+  <form id="maker" class="panel" novalidate>
+    <div class="field">
+      <label for="game-name">Name your game (you can skip this)</label>
+      <input type="text" id="game-name" maxlength="60" autocomplete="off">
+    </div>
+
+    <div id="type-fields"></div>
+
+    <label class="check">
+      <input type="checkbox" id="say" checked>
+      <span>Read words out loud<small>Good for children who can't read yet.</small></span>
+    </label>
+
+    <div class="btn-row">
+      <button type="submit" class="btn btn-go btn-big" id="make-btn">Make my game</button>
+    </div>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+    <p class="hint" id="draft-note"></p>
+  </form>
+
+  <section class="ready" id="ready" hidden tabindex="-1" aria-labelledby="ready-h">
+    <h2 id="ready-h">Your game is ready!</h2>
+    <div class="btn-row">
+      <a class="btn btn-go btn-big" id="play-link" href="play.html">Play it now</a>
+      <button type="button" class="btn btn-plain" id="copy-btn">Copy the link</button>
+    </div>
+    <p class="hint" id="copy-msg" role="status" aria-live="polite"></p>
+    <p>To play on another phone or tablet, send yourself this link by text or email:</p>
+    <output class="share-link" id="share-link"></output>
+    <p class="privacy-line">Anyone with this link can play the game and see its words. If you change the words, make the game again to get a new link.</p>
+  </section>
+</main>
+
+<div class="toast" id="toast" hidden role="status" aria-live="polite"><span id="toast-text"></span><button type="button" id="toast-undo">Undo</button></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Kitchen Table Games is free and open source. <a href="https://github.com/shandraco/kitchen-table-games">See the code or suggest an idea on GitHub</a>.</p>
+  </div>
+</footer>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/make.js"></script>
+</body>
+</html>

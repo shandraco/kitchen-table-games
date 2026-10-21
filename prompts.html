@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Make any game with AI | Kitchen Table Games</title>
+<meta name="description" content="Fill in three things about your child and copy a ready-made request into ChatGPT, Claude or Gemini. It makes a learning game about anything they love.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the form</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>Kitchen Table Games</a>
+    <nav aria-label="Main">
+      <a href="./">Make a game</a>
+      <a href="prompts.html" aria-current="page">Ideas with AI</a>
+      <a href="./#safe">Is it safe?</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="narrow">
+  <div class="page-head">
+    <h1>Make any game with AI</h1>
+    <p>Fill in three things about your child. We write the request for you. Then you paste it into an AI chat app, and it builds the game.</p>
+  </div>
+
+  <form class="panel" id="prompt-form" novalidate>
+    <div class="field">
+      <label for="age">How old is your child?</label>
+      <select id="age">
+        <option value="3">3</option><option value="4">4</option><option value="5" selected>5</option>
+        <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+        <option value="9">9</option><option value="10">10</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="learn">What should they learn or practice?</label>
+      <p class="hint" id="learn-hint">For example: the letters b and d, adding up to 10, telling time, the planets</p>
+      <input type="text" id="learn" maxlength="120" autocomplete="off" aria-describedby="learn-hint">
+    </div>
+    <div class="field">
+      <label for="love">What do they love right now? (you can skip this)</label>
+      <p class="hint" id="love-hint">For example: dinosaurs, trains, unicorns, soccer</p>
+      <input type="text" id="love" maxlength="80" autocomplete="off" aria-describedby="love-hint">
+    </div>
+    <div class="field">
+      <label for="kind">What kind of game?</label>
+      <select id="kind">
+        <option value="catch">Catch the right answer as it floats by</option>
+        <option value="story">A short adventure where they solve puzzles to move on</option>
+        <option value="sort">Sort things into the right groups</option>
+        <option value="memory">Flip cards to find pairs</option>
+        <option value="build">Answer questions to build something, a bit at a time</option>
+        <option value="surprise">Surprise me</option>
+      </select>
+    </div>
+  </form>
+
+  <section class="panel" aria-labelledby="your-prompt">
+    <h2 id="your-prompt">Your request</h2>
+    <p id="prompt-status" class="status">Type what they should learn to finish the request.</p>
+    <pre class="prompt-out" id="prompt-out" tabindex="0" aria-label="The request to copy"></pre>
+    <div class="btn-row">
+      <button type="button" class="btn btn-go btn-big" id="copy-prompt">Copy the request</button>
+    </div>
+    <p class="hint" id="copy-msg" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="band" aria-labelledby="next">
+    <h2 id="next">What to do next</h2>
+    <ol class="steps">
+      <li>Open an AI chat app, like <strong>Claude</strong>, <strong>ChatGPT</strong> or <strong>Gemini</strong>. The free versions work.</li>
+      <li>Paste the request into the chat box and send it.</li>
+      <li>Wait for the game to appear. If you only see code, type: <strong>Show me the game so I can play it here.</strong></li>
+      <li>Play it yourself first. Check that every answer is right before your child plays.</li>
+      <li>Want changes? Just ask in plain words, like "make the buttons bigger" or "add five more questions".</li>
+    </ol>
+    <div class="note-card">
+      <h3>Before your child plays</h3>
+      <p>AI apps can make mistakes, including wrong answers. Always play the game yourself first. Don't type your child's full name, school or photos into the chat.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Kitchen Table Games is free and open source. <a href="https://github.com/shandraco/kitchen-table-games">See the code or suggest an idea on GitHub</a>.</p>
+  </div>
+</footer>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/prompts.js"></script>
+</body>
+</html>
